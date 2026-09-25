@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Scenario C: API Schema and Functional Parity', () => {
   test('Headless REST API schema and transaction state validation', async ({ request, baseURL }) => {
-    const response = await request.get(`${baseURL || ''}/parabank/services/bank/customers/12212/accounts`, {
+    const response = await request.get('/parabank/services/bank/customers/12212/accounts', {
       headers: {
         'Accept': 'application/json',
       },
